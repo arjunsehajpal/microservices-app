@@ -1,0 +1,16 @@
+anyio==3.6.2
+click==8.1.3
+cryptography==40.0.2
+fastapi==0.95
+hiredis==2.2.3
+more-itertools==8.14.0
+pptree==3.1
+pydantic==1.10.7
+python-ulid==1.1.0
+redis==4.5.5
+starlette==0.26.1
+types-redis==4.5.5.2
+types-pyOpenSSL==23.1.0.3
+typing-extensions==4.5.0
+uvicorn==0.22.0
+redis-om==0.1.2
