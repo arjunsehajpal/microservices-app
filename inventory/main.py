@@ -1,11 +1,9 @@
+import redis
 from fastapi import FastAPI
-
 from fastapi.middleware.cors import CORSMiddleware
 from redis_om import HashModel
+
 from .utils import io_helpers
-
-import redis
-
 
 app = FastAPI()
 
