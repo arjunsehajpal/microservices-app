@@ -1,9 +1,14 @@
+import os
+import sys
+
 import redis
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 from redis_om import HashModel
 
-from .utils import io_helpers
+sys.path.append(os.path.join(os.getcwd(), "inventory"))
+
+from utils import io_helpers
 
 app = FastAPI()
 
