@@ -1,3 +1,7 @@
+import os
+import sys
+import time
+
 import redis
 import requests
 from fastapi import FastAPI
@@ -6,7 +10,9 @@ from fastapi.middleware.cors import CORSMiddleware
 from redis_om import HashModel
 from starlette.requests import Request
 
-from .utils import io_helpers
+sys.path.append(os.path.join(os.getcwd(), "payment"))
+
+from utils import io_helpers
 
 app = FastAPI()
 
@@ -73,6 +79,8 @@ def order_completed(order: Order):
     Args:
         order (Order): order placed when `/orders` is hit
     """
+    time.sleep(5)
+
     order.status = "completed"
     order.save()
 
